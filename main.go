@@ -35,6 +35,7 @@ func main() {
 	if err != nil {
 		elog.Fatal(err)
 	}
+	defer rows.Close()
 
 	columns, err := rows.Columns()
 	if err != nil {
